@@ -1,6 +1,6 @@
---XSpcaeHubX--
+--www.rblxscripts.net--
 
-getgenv().values = {}  -- this has been made by revv#8888, tested by WetIDreamz#0001 and zeox#9999     
+getgenv().values = {}  -- this has been made by Bad#9672, tested by WetIDreamz#0001 and zeox#9999     
 local library = {}      
 local Signal = loadstring(game:HttpGet("https://raw.githubusercontent.com/Quenty/NevermoreEngine/version2/Modules/Shared/Events/Signal.lua"))()      
 local ConfigSave = Signal.new("ConfigSave")      
