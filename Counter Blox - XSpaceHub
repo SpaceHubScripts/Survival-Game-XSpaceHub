@@ -2187,9 +2187,9 @@ CharacterAdded()
 table.foreach(Players:GetPlayers(), PlayerAdded)
 Players.PlayerAdded:Connect(PlayerAdded)
 
-if readfile("hexagon/autoload.txt") ~= "" and isfile("hexagon/configs/"..readfile("XSpaceHub/autoload.txt")) then
+if readfile("hexagon/autoload.txt") ~= "" and isfile("hexagon/configs/"..readfile("hexagon/autoload.txt")) then
 	local a,b = pcall(function()
-		cfg = loadstring("return "..readfile("XSpaceHub/configs/"..readfile("XSpacehub/autoload.txt")))()
+		cfg = loadstring("return "..readfile("hexagon/configs/"..readfile("hexagon/autoload.txt")))()
 	end)
 	
 	if a == false then
