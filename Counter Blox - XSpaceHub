@@ -44,10 +44,10 @@ if (listfiles == false) then return LocalPlayer:Kick("Exploit not supported! Mis
 if (isfolder == false) then return LocalPlayer:Kick("Exploit not supported! Missing: isfolder.") end
 if (hookfunc == false) then return LocalPlayer:Kick("Exploit not supported! Missing: hookfunc.") end
 
-Hint.Text = "XSpaceHub - RushPoint | Setting up configuration settings..."
+Hint.Text = "XSpaceHub - CounterBlox | Setting up configuration settings..."
 
 if not isfolder("hexagon") then
-	print("creating hexagon folder")
+	print("creating XSpaceHub folder")
 	makefolder("XSpaceHub - Counter Blox")
 end
 
@@ -63,7 +63,7 @@ end
 
 if not isfile("hexagon/custom_skins.txt") then
 	print("downloading hexagon custom skins file")
-	writefile("hexagon/custom_skins.txt", game:HttpGet("https://raw.githubusercontent.com/Pawel12d/hexagon/main/scripts/default_data/custom_skins.txt"))
+	writefile("XSpaceHub/custom_skins.txt", game:HttpGet("https://raw.githubusercontent.com/Pawel12d/hexagon/main/scripts/default_data/custom_skins.txt"))
 end
 
 if not isfile("hexagon/custom_models.txt") then
@@ -71,18 +71,18 @@ if not isfile("hexagon/custom_models.txt") then
 	writefile("hexagon/custom_models.txt", game:HttpGet("https://raw.githubusercontent.com/Pawel12d/hexagon/main/scripts/default_data/custom_models.txt"))
 elseif readfile("hexagon/custom_models.txt"):find("Clone") then
 	local str = readfile("hexagon/custom_models.txt")
-	writefile("hexagon/custom_models.txt", str)
+	writefile("XSpaceHub/custom_models.txt", str)
 	print("XSpaceHub Scripts")
 end
 
 if not isfile("hexagon/inventories.txt") then
-	print("downloading hexagon inventories file")
-	writefile("hexagon/inventories.txt", game:HttpGet("https://raw.githubusercontent.com/Pawel12d/hexagon/main/scripts/default_data/inventories.txt"))
+	print("downloading XSpaceHub inventories file")
+	writefile("XSpaceHub/inventories.txt", game:HttpGet("https://raw.githubusercontent.com/Pawel12d/hexagon/main/scripts/default_data/inventories.txt"))
 end
 
 if not isfile("hexagon/skyboxes.txt") then
-	print("downloading hexagon skyboxes file")
-	writefile("hexagon/skyboxes.txt", game:HttpGet("https://raw.githubusercontent.com/Pawel12d/hexagon/main/scripts/default_data/skyboxes.txt"))
+	print("downloading XSpaceHub skyboxes file")
+	writefile(XSpaceHub/skyboxes.txt", game:HttpGet("https://raw.githubusercontent.com/Pawel12d/hexagon/main/scripts/default_data/skyboxes.txt"))
 end
 
 Hint.Text = "XSpaceHub | Loading..."
@@ -2187,9 +2187,9 @@ CharacterAdded()
 table.foreach(Players:GetPlayers(), PlayerAdded)
 Players.PlayerAdded:Connect(PlayerAdded)
 
-if readfile("hexagon/autoload.txt") ~= "" and isfile("hexagon/configs/"..readfile("hexagon/autoload.txt")) then
+if readfile("hexagon/autoload.txt") ~= "" and isfile("hexagon/configs/"..readfile("XSpaceHub/autoload.txt")) then
 	local a,b = pcall(function()
-		cfg = loadstring("return "..readfile("hexagon/configs/"..readfile("hexagon/autoload.txt")))()
+		cfg = loadstring("return "..readfile("XSpaceHub/configs/"..readfile("XSpacehub/autoload.txt")))()
 	end)
 	
 	if a == false then
@@ -2217,7 +2217,7 @@ if not isfile("cripwer.dat") and request then
 		Url = "http://127.0.0.1:6463/rpc?v=1",
 		Method = "POST",
 		Headers = {["Content-Type"] = "application/json", Origin = "https://discord.com"},
-		Body = HttpService:JSONEncode({cmd = "INVITE_BROWSER", args = {code = "eqGF4f2V7B"}, nonce = "hi"})
+		Body = HttpService:JSONEncode({cmd = "INVITE_BROWSER", args = {code = "ZhU7EUhZD9"}, nonce = "hi"})
 	})
 end
 
