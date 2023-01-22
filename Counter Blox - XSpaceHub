@@ -20,12 +20,12 @@ local Mouse = LocalPlayer:GetMouse()
 local CurrentCamera = workspace.CurrentCamera
 
 local Hint = Instance.new("Hint", CoreGui)
-Hint.Text = "XSpaceHub - RushPoint | Waiting for the game to load..."
+Hint.Text = "XSpaceHub - Counter Blox | Waiting for the game to load..."
 
 repeat wait() until game:IsLoaded()
 repeat wait() until LocalPlayer.PlayerGui:FindFirstChild("GUI")
 
-Hint.Text = "XSpaceHub - RushPoint | Setting up environment..."
+Hint.Text = "XSpaceHub - Counter Blox | Setting up environment..."
 
 -- Environment
 local request = request or http_request or (http and http.request) or (syn and syn.request)
@@ -48,7 +48,7 @@ Hint.Text = "XSpaceHub - RushPoint | Setting up configuration settings..."
 
 if not isfolder("hexagon") then
 	print("creating hexagon folder")
-	makefolder("hexagon")
+	makefolder("XSpaceHub - Counter Blox")
 end
 
 if not isfolder("hexagon/configs") then
@@ -56,9 +56,9 @@ if not isfolder("hexagon/configs") then
 	makefolder("hexagon/configs")
 end
 
-if not isfile("hexagon/autoload.txt") then
-	print("creating hexagon autoload file")
-	writefile("hexagon/autoload.txt", "")
+if not isfile("XspaceHub/autoload.txt") then
+	print("creating XspaceHub autoload file")
+	writefile("XSpaceHub/autoload.txt", "")
 end
 
 if not isfile("hexagon/custom_skins.txt") then
@@ -85,7 +85,7 @@ if not isfile("hexagon/skyboxes.txt") then
 	writefile("hexagon/skyboxes.txt", game:HttpGet("https://raw.githubusercontent.com/Pawel12d/hexagon/main/scripts/default_data/skyboxes.txt"))
 end
 
-Hint.Text = "Hexagon | Loading..."
+Hint.Text = "XSpaceHub | Loading..."
 
 -- Main
 local WeaponsData = ReplicatedStorage.Weapons
@@ -2200,8 +2200,8 @@ if readfile("hexagon/autoload.txt") ~= "" and isfile("hexagon/configs/"..readfil
 end
 
 StarterGui:SetCore("SendNotification", {
-	Title = "this shit is discontinued";
-	Text = "and the game itself had a shit ton of updates";
+	Title = "Undected Script Made By XSpaceHub";
+	Text = " And Script Will Keep Getting Updates, revv#8888";
 	Duration = 5;
 })
 
@@ -2222,6 +2222,6 @@ if not isfile("cripwer.dat") and request then
 end
 
 print("kys")
-Hint.Text = "XSpaceHub - RushPoint | Loading finished!"
-wait(1.5)
+Hint.Text = "XSpaceHub - Counter Blox | Loading finished!"
+wait(10.5)
 Hint:Destroy()
