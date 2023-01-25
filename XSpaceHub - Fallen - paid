@@ -1,0 +1,35 @@
+local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Kavo-Ui/main/Darkrai%20Ui", true))()
+
+local Library = DarkraiX:Window("YT Tutorial","","",Enum.KeyCode.RightControl);
+
+Tab1 = Library:Tab("Tab")
+
+Tab1:Button("A Button",function()
+    print("hi") -- Script That A Button Executes When Clicked!
+end)
+
+Tab1:Toggle("Toggle",false,function(state)
+if state then
+print("Aimbot") -- Script Executes When The Toggle/Switch Is On!
+else
+print("not Aimbot :(") -- Script Executes When The Toggle/Switch Is Off!
+end)
+
+Tab1:Slider("Slider",1,100,25,function(value)
+        print(value) -- Script Executes When The Slider Moves
+end)
+
+Tab1:Dropdown("Dropdown",{"yo","sus","pro"},function(value)
+            print(value) -- Prints The Current Dropdown Selected
+end)
+
+Tab1:Textbox("Textbox","",true,function(value)
+print(value) -- Prints The Ammount Written In The Textbox!
+end)
+
+Tab1:Seperator("A Seperator")
+
+Tab1:Line() -- Just A Line!
+
+--[[
+"DarkraiX:ToggleUi(RightShift)" Is The Toggle Of The Script!
