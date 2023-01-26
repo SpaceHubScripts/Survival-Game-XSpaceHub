@@ -1,35 +1,99 @@
-local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Kavo-Ui/main/Darkrai%20Ui", true))()
+--[[ AntiCheat Bypasser ]]--
+game.Players.LocalPlayer.UserId = 47983795
 
-local Library = DarkraiX:Window("YT Tutorial","","",Enum.KeyCode.RightControl);
+wait()
 
-Tab1 = Library:Tab("Tab")
+local namecall; namecall = hookmetamethod(game,"__namecall",function(self,...)
+    local args = {...}
+    local method = getnamecallmethod()
 
-Tab1:Button("A Button",function()
-    print("hi") -- Script That A Button Executes When Clicked!
+    if method == "FireServer" and self.Name == "BanExploiter" then 
+        return 
+    elseif method == "GetChildren" and self.Name == "Remotes" then 
+        return {}
+    end 
+
+    return namecall(self,unpack(args))
+end)
+--[[ AntiCheat Bypasser ]]--
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+
+
+function Script()
+
+local Window = Library.CreateLib("XSpaceHub - Fallen Paid", "Sentinel")
+
+
+
+local Main = Window:NewTab("Aimbot")
+ local AimbotSection = Main:NewSection("Aimbot")
+
+ local Main = Window:NewTab("ESP")
+ local ESPSection = Main:NewSection("Visuals")
+
+local Main = Window:NewTab("Misc")
+ local MiscSection = Main:NewSection("Misc")
+
+local Main = Window:NewTab("Dupe")
+ local DupeSection = Main:NewSection("Dupe")
+
+local Main = Window:NewTab("Settings")
+ local SettingsSection = Main:NewSection("Settings")
+
+
+-- Script
+
+AimbotSection:NewButton("Aimbot", "Locks On To The Nearest Players Head When U Aim In.", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/QZ6tU0gn", true))()
 end)
 
-Tab1:Toggle("Toggle",false,function(state)
-if state then
-print("Aimbot") -- Script Executes When The Toggle/Switch Is On!
-else
-print("not Aimbot :(") -- Script Executes When The Toggle/Switch Is Off!
+
+ESPSection:NewButton("ESP", "See Players All Around The Map Through Walls.", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/XP1YZGJW", true))()
 end)
 
-Tab1:Slider("Slider",1,100,25,function(value)
-        print(value) -- Script Executes When The Slider Moves
+
+MiscSection:NewButton("NoClip (OP)", "No Clip In Anyones Base", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/3przmQ6V", true))() 
 end)
 
-Tab1:Dropdown("Dropdown",{"yo","sus","pro"},function(value)
-            print(value) -- Prints The Current Dropdown Selected
+MiscSection:NewButton("Fly", "Fly Around The Map", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/KtLKcbxr", true))()
 end)
 
-Tab1:Textbox("Textbox","",true,function(value)
-print(value) -- Prints The Ammount Written In The Textbox!
+ESPSection:NewButton("FreeCam", "The Ability To Go Any Where Without Even Being There.", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/yJ51HKy9", true))()
 end)
 
-Tab1:Seperator("A Seperator")
+DupeSection:NewButton("Dupe Items ", "This Allows You Do Dupilicate Items (Not 100%)", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/QZ6tU0gn", true))()
+end)
 
-Tab1:Line() -- Just A Line!
+SettingsSection:NewButton("Dupe Items", "This Allows You Do Dupilicate Items (Not 100%)", function()
+    
+end)
 
---[[
-"DarkraiX:ToggleUi(RightShift)" Is The Toggle Of The Script!
+MiscSection:NewButton("Teleport (Random PLayer)", "Teleports To A Random PLayer", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/iwaXFnz0", true))()
+end)
+
+local colors = {
+    SchemeColor = Color3.fromRGB(0,255,255),
+    Background = Color3.fromRGB(0, 0, 0),
+    Header = Color3.fromRGB(0, 255, 0),
+    TextColor = Color3.fromRGB(255,255,0),
+    ElementColor = Color3.fromRGB(20, 255, 20)
+}
+
+MainSection:NewKeybind("LeftShift", "KeybindInfo", Enum.KeyCode.LeftShift, function()
+	Library:ToggleUI(LeftShift)
+end)
+
+end
+
+if game.PlaceId == 2506738224
+   Script()
+end
